@@ -1,0 +1,42 @@
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: $pinkish;
+  color: $black;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
+  &__links {
+    font-size: $font-xs;
+    padding-bottom: 1rem;
+
+    a {
+      font-weight: 800;
+      
+      @include breakpoint-up (large) {
+        font-size: $font-s;
+      }
+
+      &:not(:last-child) {
+        padding-right: 1rem;
+
+        @include breakpoint-up (medium) {
+          padding-right: 2rem;
+        }
+
+        @include breakpoint-up (large) {
+          padding-right: 3rem;
+        }
+      }
+    }
+  }
+  
+  &__copyright {
+    font-size: $font-xs;
+
+    @include breakpoint-up (large) {
+      font-size: $font-s;
+    }
+  }
+}
+

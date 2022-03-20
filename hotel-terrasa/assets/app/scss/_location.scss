@@ -1,0 +1,111 @@
+.location {
+  flex-direction: column;
+  background-color: $yellowish;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  
+  &__txt {
+    padding-top: 2rem;
+    background-image: url('/assets/images/location-bg.svg');
+    width: 100%;
+
+    p {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+
+      @include breakpoint-up (large) {
+        font-size: $font-m;
+      }
+    }
+  }
+
+  &__map {
+    margin-top: 5rem;
+    height: 20rem;
+    width: 20rem;
+    box-shadow: 0px 0px 5px 3px #000000;
+
+    @include breakpoint-up (medium) {
+      height: 25rem;
+      width: 25rem;
+    }
+
+    @include breakpoint-up (large) {
+      margin-top: 8rem;
+      height: 35rem;
+      width: 35rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    background-color: $pinkish;
+    background-image: $pinkish;
+    border: none;
+    border-radius: 50%;
+    transition: 200ms;
+
+    @include breakpoint-up (large) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  
+  button svg {
+    fill: $white;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+
+    @include breakpoint-up (large) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  
+  button::before {
+    content: 'Back to Top';
+    position: absolute;
+    transform: translateX(-50%) translateY(-250%);
+    font-size: $font-xs;
+    transition: 200ms;
+    color: transparent;
+    font-weight: bold;
+
+    @include breakpoint-up (large) {
+      font-size: $font-s;
+    }
+  }
+  
+  button:hover {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    width: 2rem;
+    height: 2rem;
+
+    @include breakpoint-up (large) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  
+  button:hover::before {
+    color: $black;
+  }
+
+  button:hover svg {
+    animation: bounce 2s infinite linear;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+}

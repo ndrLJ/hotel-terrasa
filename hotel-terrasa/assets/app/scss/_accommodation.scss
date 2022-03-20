@@ -1,0 +1,65 @@
+.accommodation {
+  background-color: $yellowish;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  &__item {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem 3rem;
+    margin: 0 0;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    @include breakpoint-up (medium) {
+      margin: 0 auto;
+    }
+
+    @include breakpoint-up (large) {
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem 5rem;
+    }
+
+    &__img {
+     width: 100%;
+     height: 100%;
+     display: block;
+
+     @include breakpoint-up (medium) {
+      max-height: 600px;
+     }
+    }
+
+    &__txt {
+      padding-top: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      color: $white;
+      background-color: $peach;
+      border-radius: 5px;
+      box-shadow: 0 1.5rem 4rem rgba($black, .15);
+
+      @include breakpoint-up (medium) {
+        max-height: 600px;
+      }
+
+      h2 {
+        color: $pinkish;
+        font-weight: 800;
+        font-size: 1.6rem;
+
+        @include breakpoint-up (medium) {
+          font-size: 1.9rem;
+        }
+      }
+
+      p {
+        line-height: 4rem;
+      }
+    }
+  }
+}

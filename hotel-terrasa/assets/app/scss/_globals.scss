@@ -1,0 +1,134 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: $font-m;
+  color: $black;
+  line-height: 1.2;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+h1, h2, h3 {
+  margin-top: 0px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 800;
+  line-height: 1.10;
+  color: $black;
+}
+
+h1 {
+  font-size: $font-l;
+
+  @include breakpoint-up (large) {
+    font-size: $font-xl;
+  }
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: $font-l;
+
+  @include breakpoint-up(large) {
+    font-size: $font-xl;
+    margin-bottom: 2.2rem;
+  }
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  font-size: $font-m;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: $font-s;
+
+  @include breakpoint-up (large) {
+    font-size: $font-m;
+  }
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  margin: 0 auto;
+
+  &--pad {
+    padding-top: 0;    
+    padding-bottom: 0;    
+    padding-left: 2.5rem;    
+    padding-right: 2.5rem;    
+  }
+}
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.wave {
+  display: block;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, $peach, $white);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.zoom {
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 5px 1px;
+  }
+}
+
+// Visibility
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display:none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display:none;
+  }
+}

@@ -1,0 +1,30 @@
+.intro {
+  background-color: $yellowish;
+  font-family: 'Montserrat', sans-serif;
+  flex-direction: column;
+
+  &__txt {
+    text-align: center;
+    max-width: 1024px;
+  }
+
+  &__cta {
+    &:link,
+    &:visited {
+      margin-top: 1rem;
+      font-size: $font-m;
+      color: $pinkish;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 2px solid $pinkish;
+      transition: all .2s;
+    }
+
+    &:hover {
+      background-color: $pinkish;
+      color: $white;
+      box-shadow: 0 1rem 2rem rgba($black, .15);
+      transform: translateY(-2px);
+    }
+  }
+}
