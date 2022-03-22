@@ -1,4 +1,11 @@
 .header {
+  
+  #navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
 
   &.open {
 
@@ -46,6 +53,7 @@
     @include breakpoint-up (large) {
       height: 6rem;
       width: 6rem;
+      margin-right: 62px;
     }
   }
 

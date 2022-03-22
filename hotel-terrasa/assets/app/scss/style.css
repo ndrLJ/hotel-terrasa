@@ -309,6 +309,13 @@ ul {
   }
 }
 
+.header #navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
 .header.open .header__toggle > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -357,6 +364,7 @@ ul {
   .header svg {
     height: 6rem;
     width: 6rem;
+    margin-right: 62px;
   }
 }
 
@@ -885,6 +893,13 @@ img {
 
 .footer__links a {
   font-weight: 800;
+  color: black;
+}
+
+.footer__links a:hover {
+  color: white;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 @media (min-width: 63.8em) {
